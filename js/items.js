@@ -3,7 +3,7 @@ var items = {
     build: function(item){
         if(build.hasOwnProperty(item) && build[item].exists != true){
             $.each(build[item].cost, function(resource, amount){
-                if(resources.edit(resource, (0-amount))){
+                if(resources.edit(resource, -amount)){
                     build[item].exists = true;
                 }
             });

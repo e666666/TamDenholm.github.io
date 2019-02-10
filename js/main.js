@@ -5,9 +5,11 @@ var main = {
     // main loop of the game
     run: function(){
         // initial load
+        saving.load()
+        items.update()
         resources.update();
         actions.attach();
-
+        
         // begin loop
         setInterval(function(){
 
@@ -18,6 +20,8 @@ var main = {
             resources.update();
 
         }, this.game_tick);
+        
+        setInterval(saving.save,10000)
     },
 
     die: function(){

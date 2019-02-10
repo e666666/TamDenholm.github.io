@@ -11,6 +11,7 @@ var build = {
         },
         consumes: {
             wood: 1,
-        }
+        },
+        exists: false
     }
 }
